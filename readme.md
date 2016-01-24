@@ -7,7 +7,7 @@ This repository is a compilation of notes to myself about Hibernate, if you want
 I'm using a maven project in my example,  so the first thing to do is to import our dependencies. Now I will use:
 
 ```
- <dependency>
+        <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>4.3.6.Final</version>
