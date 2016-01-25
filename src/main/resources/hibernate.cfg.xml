@@ -21,7 +21,7 @@
         <property name="show_sql">true</property>
 
         <mapping class="com.selfstudy.entity.User"/>
-        <mapping class="com.selfstudy.entity.UserPropety"/>
+        <mapping class="com.selfstudy.entity.UserProperty"/>
 
     </session-factory>
 
