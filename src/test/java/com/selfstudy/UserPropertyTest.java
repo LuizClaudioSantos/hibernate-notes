@@ -1,10 +1,10 @@
 package com.selfstudy;
 
-import com.selfstudy.entity.User;
-import com.selfstudy.entity.UserPropety;
+import com.selfstudy.entity.UserProperty;
 import com.selfstudy.util.HibernateUtil;
 import org.hibernate.Session;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.Date;
@@ -14,11 +14,11 @@ import java.util.Date;
  */
 public class UserPropertyTest {
 
-    private UserPropety user;
+    private static UserProperty user;
 
-    @Before
-    public void createUser(){
-        UserPropety user = new UserPropety();
+    @BeforeClass
+    public static void createUser(){
+        UserPropertyTest.user  = new UserProperty();
         user.setFirstName("Zé");
         user.setLastName("das Couves");
         user.setBirthDate(new Date());
@@ -27,7 +27,6 @@ public class UserPropertyTest {
         user.setLastUpdateBy("Alonso");
         user.setLastUpdateDate(new Date());
         user.setCreateBy("Alonso");
-        this.user = user;
     }
 
     @Test
@@ -41,15 +40,6 @@ public class UserPropertyTest {
 
     }
 
-    //@Test
-    public void PropertiesConfigurationTest(){
 
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
-
-        session.save(user);
-        session.close();
-
-    }
 
 }

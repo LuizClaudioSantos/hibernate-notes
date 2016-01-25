@@ -9,7 +9,7 @@ import java.util.Date;
 @Entity
 @Table(name = "FINANCES_USER")
 @Access(value = AccessType.PROPERTY)
-public class UserPropety {
+public class UserProperty {
 
     private Long userId;
 
