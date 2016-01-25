@@ -56,8 +56,8 @@ I'm using a maven project in my example,  so the first thing to do is to import 
 - Use the annotation @Trasient to mark a property in the Entity as not database property.
 
 ```
- @Transient
-    private boolean active;
+   @Transient
+   private boolean active;
 ```
 
 
