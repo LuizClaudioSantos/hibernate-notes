@@ -47,8 +47,17 @@ I'm using a maven project in my example,  so the first thing to do is to import 
 
 ```
     @Column(name="CREATED_DATE", updatable = false)
-    private Date createDate;
+    private Datea createDate;
 
     @Column(name="CREATED_BY", updatable = false)
     private String createBy;
 ```
+
+- Use the annotation @Trasient to mark a property in the Entity as not database property.
+
+```
+ @Transient
+    private boolean active;
+```
+
+
