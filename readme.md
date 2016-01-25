@@ -2,7 +2,7 @@
 
 This repository is a compilation of notes to myself about Hibernate, if you want to make any comments  in it, please go ahead.
 
-## Basic Projet Setup
+## Basic Projet Setup (Branch)
 
 I'm using a maven project in my example,  so the first thing to do is to import our dependencies. Now I will use:
 
@@ -41,3 +41,14 @@ I'm using a maven project in my example,  so the first thing to do is to import 
 ```
 
         
+## Mapping annotations (Branch)
+
+- If you don't want allow the update of a field, you can use the updatable equals to false: 
+
+```
+    @Column(name="CREATED_DATE", updatable = false)
+    private Date createDate;
+
+    @Column(name="CREATED_BY", updatable = false)
+    private String createBy;
+```
