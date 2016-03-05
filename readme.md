@@ -45,7 +45,7 @@ I'm using a maven project in my example,  so the first thing to do is to import 
 
 ### JPA Annotation x Hibernate Annotation
 - JPA Annotation is defined by the spec (JSR 137)
-- Hibernate Annotation goes beyond the funcionlities int the spec (JSR 137)
+- Hibernate Annotation goes beyond the funcionalities in the spec (JSR 137)
 
 ### Hibernates Annotation
 - If you don't want allow the update of a field, you can use the updatable equals to false: 
