@@ -39,8 +39,6 @@ public class User {
     @Column(name="CREATED_BY", updatable = false)
     private String createBy;
 
-    @Transient
-    private boolean active;
 
     public Long getUserId() {
         return userId;

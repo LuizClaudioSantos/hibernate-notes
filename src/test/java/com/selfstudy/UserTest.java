@@ -8,7 +8,7 @@ import org.junit.*;
 import java.util.Date;
 
 /**
- * Created by luizfr on 1/24/16.
+ * Created by Luiz Claudio Santos on 1/24/16.
  */
 public class UserTest {
 
