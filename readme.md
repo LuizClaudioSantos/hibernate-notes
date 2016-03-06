@@ -46,6 +46,16 @@ I'm using a maven project in my example,  so the first thing to do is to import 
 ### JPA Annotation x Hibernate Annotation
 - JPA Annotation is defined by the spec (JSR 137)
 - Hibernate Annotation goes beyond the funcionalities in the spec (JSR 137)
+ 
+### The class that represent a class should be annoted as Enity
+- By default the name of class corresponds to the name of table.
+- The annotation @Table could be used to add name of the that doesn't mach with the name of the table.
+```
+@Entity
+@Table(name="FINANCES_USER")
+public class User {
+```
+
 
 ### Hibernates Annotation
 - If you don't want allow the update of a field, you can use the updatable equals to false: 
