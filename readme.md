@@ -57,7 +57,7 @@ public class User {
 ```
 
 
-### Hibernates Annotation
+### Hibernate Fields Annotations
 - If you don't want allow the update of a field, you can use the updatable equals to false: 
 
 ```
