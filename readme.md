@@ -109,4 +109,46 @@ public class User {
     }
 ```
 
+### In this project I managed to persist in my object in tests
+- First I create a User object.
+- So I create a Hibernate Session
 
+```
+    @BeforeClass
+    public static void initialize(){
+        User user = new User();
+        user.setFirstName("Zé");
+        user.setLastName("das Couves");
+        user.setBirthDate(new Date());
+        user.setCreateDate(new Date());
+        user.setEmail("zedascouves@server.com");
+        user.setLastUpdateBy("Alonso");
+        user.setLastUpdateDate(new Date());
+        user.setCreateBy("Alonso");
+        UserTest.user = user;
+        UserTest.session = HibernateUtil.getSessionFactory().openSession();
+    }
+```    
+
+- I used a test to save the objet in the database.
+
+```
+ @Test
+    public void PropertiesConfigurationTest(){
+        session.beginTransaction();
+        session.save(this.user);
+        session.getTransaction().commit();
+    }
+```
+
+-I user  test to update the object in the database.
+
+```
+    @Test
+    public void updateUser(){
+        session.beginTransaction();
+        User dbUser = (User) session.get(User.class, this.user.getUserId());
+        dbUser.setFirstName("Abreu");
+        session.getTransaction().commit();
+    }
+```    
