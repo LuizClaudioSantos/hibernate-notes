@@ -58,6 +58,18 @@ public class User {
 
 
 ### Hibernate Fields Annotations
+
+- The annotation @Id you mark the primary key of the table.
+- The @Generate use the strategy to create new primary key values, another strategy that can be used GenerationType.SEQUENCE or table.
+- With annotation @Column and the qualifier name you can mach the class and the column name.  
+
+```
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name="USER_ID")
+    private Long userId;
+```
+
 - If you don't want allow the update of a field, you can use the updatable equals to false: 
 
 ```
