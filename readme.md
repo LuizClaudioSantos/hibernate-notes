@@ -87,4 +87,26 @@ public class User {
    private boolean active;
 ```
 
+### Hibernate Methods Annotations
+
+- The same annotations can be used in methods instead fields.
+
+```
+@Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column(name="USER_ID")
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    @Column(name="FIRST_NAME")
+    public String getFirstName() {
+        return firstName;
+    }
+```
+
 
